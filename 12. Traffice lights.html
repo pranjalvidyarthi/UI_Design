@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12. Traffic using HTML CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #329ed6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 85px;
+            height: 250px;
+            padding: 15px;
+            background: #2d3e55;
+            border-radius: 50px;
+        }
+
+        .circle{
+            position: relative;
+            background: rgba(0, 0, 0, 0.3);
+            height: 50px;
+            border-radius: 50%;
+            width: 50px;
+        }
+        .circle::after{
+            border-right: 4px solid rgba(255,255,255,0.6);
+            position: absolute;
+            content: '';
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            top: 5px;
+            left: 4px;
+        }
+        .red{
+            background: #c0392b !important;
+            box-shadow: 0 0 20px 5px #c0392b;
+        }
+
+        .yellow{
+            background: #f1c40f !important;
+            box-shadow: 0 0 20px 5px #f1c40f;
+        }
+
+        .green{
+            background: #2ecc71 !important;
+            box-shadow: 0 0 20px 5px #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle" data-color="red"></div>
+        <div class="circle" data-color="yellow"></div>
+        <div class="circle" data-color="green"></div>
+    </div>
+    <script>
+        const circles = document.querySelectorAll('.circle');
+        let activeLight = 0;
+
+        setInterval(changeLight, 1000);
+
+        function changeLight() {
+            // Remove all color classes
+            circles.forEach(circle => {
+                circle.classList.remove('red', 'yellow', 'green');
+            });
+
+            // Add color to active circle
+            const currentLight = circles[activeLight];
+            const color = currentLight.getAttribute('data-color');
+            currentLight.classList.add(color);
+
+            activeLight++;
+            if (activeLight > 2) {
+                activeLight = 0;
+            }
+        }
+    </script>
+</body>
+</html>

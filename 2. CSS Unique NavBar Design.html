@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. CSS Neon Snippet Login Screen </title>
+</head>
+<style>
+    body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  height: 100vh;
+}
+
+.container{
+  width:200px;
+  height: 200px;
+  display: grid;
+  grid-template-rows:1fr 1fr;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.item{
+  width:100px;
+  height: 100px;
+  background-color: #000;
+  border:2px solid red;
+  box-sizing:border-box;
+  border-radius:40px;
+  cursor:pointer;
+  color: #fff;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  position: relative;  
+  z-index: 1; 
+}
+/* .item:hover{
+  background-color: #fff;
+} */
+.item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 35px;
+  z-index: -1;
+  box-shadow: 0 0 10px 5px currentColor;
+}
+
+.item:nth-child(1),.item:nth-child(1)::after{
+  border-bottom-right-radius:0;
+  border-top-left-radius:0;
+  border: 1px solid #06f88b;
+  color: #06f88b;
+}
+
+.item:nth-child(2),.item:nth-child(2)::after {
+  border-bottom-left-radius:0;
+  border-top-right-radius:0;
+  border:1px solid #00fcff;
+  color: #00fcff;
+}
+
+.item:nth-child(3),.item:nth-child(3)::after{
+  border-top-right-radius:0;
+  border-bottom-left-radius:0;
+  border:1px solid #711af3;
+  color: #6500ff;
+}
+
+.item:nth-child(4),.item:nth-child(4)::after{
+  border-top-left-radius:0;
+  border-bottom-right-radius:0;
+  border:1px solid #ff00b9;
+  color: #ff00b9;
+}
+
+.item:hover{
+  transform: scale(1.02);
+  transition: transform 0.6s ease;
+}
+
+.item:nth-child(1):hover::after { 
+  box-shadow: 0 0 20px 5px #06f88b; 
+  transition: box-shadow 0.3s ease;
+}
+.item:nth-child(2):hover::after { 
+  box-shadow: 0 0 20px 5px #00fcff; 
+  transition: box-shadow 0.3s ease;
+}
+.item:nth-child(3):hover::after { 
+  box-shadow: 0 0 20px 5px #6500ff; 
+  transition: box-shadow 0.3s ease;
+}
+.item:nth-child(4):hover::after { 
+  box-shadow: 0 0 20px 5px #ff00b9; 
+  transition: box-shadow 0.3s ease;
+}
+.item:hover {
+  text-shadow: 0 0 8px currentColor;
+}
+.item::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0;
+  filter: blur(25px);
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.item:hover::before {
+  opacity: 0.2;
+}
+
+.home{
+  position:relative;
+}
+.home::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  z-index: 3;
+  top: -12px; 
+  left: -36px;
+  transform: rotate(45deg);
+  background-color: #06f88b;
+}
+.home::before{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  z-index: 3;
+  top: -12px; 
+  left: -41px;
+  transform: rotate(-45deg);
+  background-color: #06f88b;
+}
+
+
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="item">Home
+        <div class="home"></div>
+        </div>
+        <div class="item">About</div>
+        <div class="item">Services</div>
+        <div class="item">Contact</div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Social Icons</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.social-container {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  font-size: 30px;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 0 10px #fff;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #000;
+}
+
+.linkedin:hover {
+  background-color: #0e76a8;
+  box-shadow: 0 0 15px #0e76a8, 0 0 30px #0e76a8;
+}
+
+.youtube:hover {
+  background-color: #ff0000;
+  box-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
+}
+
+.facebook:hover {
+  background-color: #3b5998;
+  box-shadow: 0 0 15px #3b5998, 0 0 30px #3b5998;
+}
+
+.threads:hover {
+  background-color: #000;
+  box-shadow: 0 0 15px #fff, 0 0 30px #fff;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="social-container">
+  <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+  <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+  <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" class="social-icon threads"><i class="fa-brands fa-threads"></i></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>17. Claymorphism Icon hover effect</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eaf6ff;
+}
+
+.sci{
+    position: relative;  
+    display: flex;
+    justify-content: center; 
+}
+
+.sci li{
+    list-style: none;
+}
+
+.sci li a{
+    position: relative;
+    width: 160px;
+    height: 160px;
+    background: #fff;
+    display: inline-block;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    margin: 0 8px;
+    color: #0994ff;
+    border-radius: 15px;
+    font-size: 5em;
+    transition: 0.5s;
+    box-shadow: 6px 6px 12px rgba(9,148,255,0.1),
+    -3px -3px 10px rgba(9,148,255,0.1),
+    inset -3px -3px 7px rgba(9,148,255,0.25);
+}
+
+.sci li a:hover{
+    color: #ff638e;
+        box-shadow: 6px 6px 12px rgba(9,148,255,0.1),
+    -3px -3px 10px rgba(9,148,255,0.1),
+    inset -3px -3px 7px rgba(9,148,255,0.25);
+}
+
+</style>
+<body>
+    <ul class="sci">
+        <li><a href="#"><i class="fa-solid fa-earth-americas"></i></a></li>
+    </ul>
+</body>
+</html>
